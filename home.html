@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <title> TechBill</title>
+    <link rel="icon" type="image/ico" href="game_logo/icon-16x16.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+
+</head>
+
+<body onresize = "check_width()">
+    <div class="header">
+        TechBill
+    </div>
+    <div class = "centering">
+        <button type="button" class="button play" onclick="play()">Play</button>
+    </div>
+    <div class="buttons">
+        <button type="button" class="button batton" onclick="sponsors()">Sponsors</button>
+        <button type="button" class="button batton lefting" onclick="settings()">Settings</button>
+    </div>
+
+    <footer class="footer">
+        <div id="gameby">
+            Game by AVAC corp.
+        </div>
+    </footer>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAQRwC4rj8zSa-AnVgA2WAAnXHFQqClF6c",
+            authDomain: "nest-avac.firebaseapp.com",
+            databaseURL: "https://nest-avac.firebaseio.com",
+            projectId: "nest-avac",
+            storageBucket: "nest-avac.appspot.com",
+            messagingSenderId: "204529136753",
+            appId: "1:204529136753:web:919aaa1dc1095ffd"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="javascript/home.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,50 @@
+
+@font-face {
+    font-family: Brush;
+    src: url('../fonts/BRUSHSCI.ttf');
+}
+
+
+
+body {
+    margin: 0;
+    background-image: url("../photos/895810848e691cb.jpg");
+    background-size: cover;
+}
+#name{
+    color: white;
+    margin-top: 125px;
+    margin-left: 25%;
+    padding: 92px, 184px;
+    color: #FFF;
+    font-family: Avenir;
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 46px;
+}
+#ans{
+    margin-left: 25%;
+    height: 67px;
+    width: 151px;
+    color: #FFF;
+    font-family: Brush;
+    font-size: 55px;
+    font-style: italic;
+    line-height: 67px;
+}
+#inp{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.button {
+    margin-top: 50%;
+    color: #33E1FF;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 30px;
+    line-height: 35px;
+    height: 62px;
+    width: 140px;
+    border-radius: 13px;
+    background-color: #FFF;
+}

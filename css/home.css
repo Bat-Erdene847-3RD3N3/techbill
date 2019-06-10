@@ -1,0 +1,65 @@
+
+@font-face {
+    font-family: Brush;
+    src: url('../fonts/BRUSHSCI.ttf');
+}
+
+body {
+    margin: 0;
+    background-image: url("../photos/Screen Shot 2019-05-06 at 6.22.42 PM.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    width: 100%;
+    height: 67px;
+    text-align: center;
+    color: #FFF;
+    font-family: Brush;
+    font-size: 55px;
+    font-style: italic;
+    line-height: 67px;
+    background: linear-gradient(179.67deg, #000 0%, #432D78 100%);
+}
+
+.button {
+    height: 57px;
+    width: 141px;
+    border-radius: 13px;
+    background-color: #FFF;
+
+    color: #39F;
+    font-family: Arial;
+    font-size: 22px;
+    line-height: 25px;
+}
+
+.play {
+    margin-top: 200px;
+}
+
+.batton {
+    margin-top: 75px;
+}
+
+.footer {
+    margin-top: 83px;
+    width: 100%;
+    height: 112px;
+    background: linear-gradient(180deg, #432D78 0%, #39F 100%);
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+#gameby {
+    color: white;
+    padding-top: 45px;
+    font-size: 30px;
+    text-align: center;
+}
+.centering{
+    display: flex;
+    justify-content: center;
+}

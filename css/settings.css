@@ -1,0 +1,82 @@
+@font-face {
+    font-family: Brush;
+    src: url('../fonts/BRUSHSCI.ttf');
+}
+
+body {
+    margin: 0;
+    background-image: url("../photos/Screen Shot 2019-05-09 at 5.30.37 PM.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    width: 100%;
+    height: 67px;
+    color: #FFF;
+    font-family: Brush;
+    font-size: 55px;
+    font-style: italic;
+    line-height: 67px;
+    display: flex;
+}
+
+.button {
+    height: 55px;
+    width: 202px;
+    border-radius: 15px;
+    background-color: #FFF;
+
+    color: #33E1FF;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+.button1 {
+    height: 32.85px;
+    width: 42px;
+    border-radius: 15px;
+    background-image: url("../photos/Group.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: #33E1FF;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+.play {
+    margin-left: 86.5px;
+    margin-top: 23px;
+}
+
+.batton {
+    margin-top: 75px;
+}
+
+.lefting {
+    margin-left: 67px;
+}
+
+.footer {
+    margin-top: 11px;
+    width: 100%;
+    height: 112px;
+}
+
+#gameby {
+    color: white;
+    padding-top: 96px;
+    text-align: center;
+}
+
+.buttons {
+    margin-top: 220px;
+}
+
+.text {
+    padding-left: 56px;
+}

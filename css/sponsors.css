@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    background-image: url("../photos/nest_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.play {
+    margin-left: 121px;
+    margin-top: 275px;
+}
+
+.lefting {
+    margin-left: 67px;
+}
+#gameby {
+    padding-top: 96px;
+    text-align: center;
+}
+
+.button {
+    height: 57px;
+    width: 141px;
+    border-radius: 13px;
+    background-color: #FFF;
+    margin-top: 226px;
+    color: #39F;
+    font-family: Arial;
+    font-size: 22px;
+    line-height: 25px;
+}
+
+#logo {
+    margin-top: 300px;
+    width: 350px;
+    height: 64px;
+    align-items: center;
+    background-image: url("../photos/logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}

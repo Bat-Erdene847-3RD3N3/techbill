@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title> TechBill</title>
+    <link rel="icon" type="image/ico" href="game_logo/icon-16x16.png" />
+    <link rel="stylesheet" type="text/css" href="css/sign_up.css">
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+</head>
+
+<body onresize = "check_width()">
+    <div class="header">
+        <div class="font">
+            TechBill
+        </div>
+    </div>
+    <div id="namee">
+        Sign up
+    </div>
+    <div class="inputs" onclick="clear()">
+        <input type="string" class="inputing" value="" placeholder=" Name..." id="Name">
+        <input type="password" class="inputing topping" value="" placeholder=" Password..." id="Password">
+        <input type="password" class="inputing topping" value="" placeholder=" Re-enter Password..." id="Repassword">
+        <div class="warning" id="warningg" hidden>
+            <div class="warningText" id=warninggText>
+                Incorrect password! Please rewrite the password
+            </div>
+        </div>
+    </div>
+
+    <div id="inp">
+        <button type="button" class="button" onclick="back()">Back</button>
+        <button type="button" class="button" onclick="sign_up()">Sign Up</button>
+    </div>
+    <script src="javascript/sign_up.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAQRwC4rj8zSa-AnVgA2WAAnXHFQqClF6c",
+            authDomain: "nest-avac.firebaseapp.com",
+            databaseURL: "https://nest-avac.firebaseio.com",
+            projectId: "nest-avac",
+            storageBucket: "nest-avac.appspot.com",
+            messagingSenderId: "204529136753",
+            appId: "1:204529136753:web:919aaa1dc1095ffd"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        const db = firebase.database();
+    </script>
+
+</body>
+
+
+</html>

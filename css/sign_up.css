@@ -1,0 +1,99 @@
+@font-face {
+    font-family: Brush;
+    src: url('../fonts/BRUSHSCI.ttf');
+}
+
+body {
+    margin: 0;
+    background-image: url("../photos/895810848e691cb.jpg");
+    background-size: cover;
+}
+
+.font {
+    height: 67px;
+    width: 151px;
+    color: #FFF;
+    font-family: Brush;
+    font-size: 55px;
+    font-style: italic;
+    line-height: 67px;
+}
+
+.inputing {
+    height: 48px;
+    width: 313px;
+    border-radius: 12px;
+    background-color: #FFF;
+    color: #333;
+    font-family: Arial;
+    font-size: 23px;
+    line-height: 26px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    height: 93px;
+    width: 100%;
+    align-items: center;
+    background: linear-gradient(90deg, #39F 0%, #33E1FF 100%);
+}
+
+.inputs {
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inp {
+    margin-top: 105px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    color: #33E1FF;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 30px;
+    line-height: 35px;
+    height: 62px;
+    width: 150px;
+    border-radius: 13px;
+    background-color: #FFF;
+}
+
+.topping {
+    margin-top: 48px;
+}
+
+#namee {
+    height: 31px;
+    width: 100%;
+    color: #FFF;
+    font-family: Avenir;
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 31px;
+    text-align: center;
+}
+
+.warning {
+    position: fixed;
+    margin-top: 190px;
+    height: 94px;
+    width: 318px;
+    border-radius: 9px;
+    background-color: #BF0C0C;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.warningText {
+    padding-left: 5px;
+    height: 60px;
+    width: 318px;
+    color: #FFF;
+    font-family: Menlo;
+    font-size: 17px;
+    line-height: 20px;
+}

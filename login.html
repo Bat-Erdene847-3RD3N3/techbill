@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title> TechBill</title>
+    <link rel="icon" type="image/ico" href="game_logo/icon-16x16.png"/>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+
+</head>
+
+<body onresize = "check_width()">
+    <div class="header">
+        <div class="font">
+            TechBill
+        </div>
+    </div>
+    <div id="namee">
+        Login
+    </div>
+    <div class="inputs">
+        <input type="string" class="inputing" value="" placeholder=" Name..." id="Name">
+        <input type="password" class="inputing topping" value="" placeholder=" Password..." id="Password">
+        <div class="warning" id="warningg" hidden>
+            <div class="warningText">
+                The name or password you’ve
+                entered doesn’t match any
+                account please try again later
+            </div>
+        </div>
+    </div>
+    <div class="inp">
+        <button type="button" class="button" onclick="back()">Back</button>
+        <button type="button" class="button" onclick="login()">Login</button>
+    </div>
+    <script src="javascript/login.js"></script>
+
+</body>
+
+
+</html>

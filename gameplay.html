@@ -1,0 +1,335 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title> TechBill</title>
+    <link rel="icon" type="image/ico" href="game_logo/icon-16x16.png"/>
+    <link rel="stylesheet" type="text/css" href="css/gameplay.css">
+</head>
+
+<body onresize = "check_width()">
+    <div class="center_turn">
+        <div id="turn" class="turn"></div>
+    </div>
+    <div class="center_buy hidden" id="winlose">
+        <div class="winlose" id="win">
+            <div id="winlosetxt">Congratulations. You have become richest person in the world</div>
+            <div class="centerer">
+                <div id="winloseimg"></div>
+            </div>
+            <div class="centerer">
+                <button class="winlose_button" id="winlose_button" onclick="winlosefunction()">return to menu</button>
+            </div>
+        </div>
+    </div>
+    <div class="loading" id="delete_me">
+        <div class="loading_text">LOADING...</div>
+        <div class="real_loading"></div>
+        <div class="loading_text">TIPS</div>
+        <div class="blah">If you enter a portal it will transfer you to the next one</div>
+    </div>
+    <div id="opacity" class="opacity hidden"></div>
+    <audio src="LAKEY_INSPIRED_-_Chill_Day_Vlog_No_Copyright_Music-vtHGESuQ22s.mp3" controls autoplay loop hidden></audio>
+    <div class="center_buy hidden" id="good">
+        <div class="chance_tab_border" id="good_chance_border">
+            <div class="chance_tab" id="good_chance">
+                <div class="chance_header" id="chance_good">Chance</div>
+                <div class="chance_message" id="news">Good News Receive 20B$ for consultancy free</div>
+                <div class=center_buy_logo>
+                    <div class="chance_icon" id="chance_icon"></div>
+                </div>
+                <div class=center_buy_logo>
+                    <button class="chance_button" id="chance_button1" onclick="chance_pass_good()">Ok</button>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <div class="center_buy hidden" id="bad">
+        <div class="chance_tab_border" id="bad_chance_border1">
+            <div class="chance_tab" id="bad_chance1">
+                <div class="chance_header" id="chance_bad1">Chance</div>
+                <div class="chance_message" id="news1">Good News Receive 20B$ for consultancy free</div>
+                <div class=center_buy_logo>
+                    <div class="chance_icon" id="chance_icon1"></div>
+                </div>
+                <div class=center_buy_logo>
+                    <button class="chance_button" id="chance_button12" onclick="chance_pass_bad()">Ok</button>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <div class="center_buy" id="indexz">
+            <div id="buy" class="buy hidden">
+                <div class="center_buy_logo">
+                    <div id="buy_logo"></div>
+                </div>
+                <div class="center_buy_logo">
+                    <div id="buy_image"></div>
+                    <div id="header1" class="header">
+                        Huawei
+                    </div>
+                </div>
+                <div class="center_buy_logo">
+                    <div id="header2" class="header"> 100B$</div>
+                </div>
+                <div class="letter_width">
+                    <div id="letter1" class="letter">Tax:</div>
+                    <div id="letter1val" class="letter">100B$</div>
+                </div>
+                <div class="letter_width">
+                    <div id="letter2" class="letter">Upgrade:</div>
+                    <div id="letter2val" class="letter">200B$</div>
+                </div>
+                <div class="letter_width">
+                    <div id="letter3" class="letter">Tax after upgrade:</div>
+                    <div id="letter3val" class="letter">300B$</div>
+                </div>
+                <div id="header3" class="header">Face of Social</div>
+                <div id="buy_buttons">
+                    <button class="buy_button" id="buy_button1" onclick="pass()">Pass</button>
+                    <div class="absolute_word">or</div>
+                    <button class="buy_button" id="buy_button2" onclick="buy()">Buy</button>
+                </div>
+            </div>
+    </div>
+    <div class="center_upgrade" id="indexz_upgrade">
+        <div id="upgrade" class="upgrade hidden">
+            <div class="center_upgrade_logo">
+                <div id="upgrade_logo"></div>
+            </div>
+            <div class="center_upgrade_logo">
+                <div id="upgrade_image"></div>
+                <div id="header1_upgrade" class="header">
+                    Huawei
+                </div>
+            </div>
+            <div class="letter_width">
+                <div id="letter2_upgrade" class="letter">Want to upgrade your company?</div>
+            </div>
+            <div class="topping_upgrade">
+                <div class="letter_width">
+                    <div id="letter2_upgrade" class="letter">Upgrade:</div>
+                    <div id="letter2val_upgrade" class="letter">200B$</div>
+                </div>
+                <div class="letter_width">
+                    <div id="letter2_upgrade" class="letter">Upgraded tax:</div>
+                    <div id="letter3val_upgrade" class="letter">200B$</div>
+                </div>
+            </div>
+            <div id="upgrade_buttons">
+                <button class="upgrade_button" id="upgrade_button1" onclick="pass_upgrade()">No</button>
+                <div class="absolute_word">or</div>
+                <button class="upgrade_button" id="upgrade_button2" onclick="upgrade_yes()">Yes</button>
+            </div>
+        </div>
+    </div>
+    <div class="centerer">
+        <div id="timer">
+            <div id="time">--</div>
+        </div>
+    </div>
+    <div class="stats" id="stat">
+        <div class="money" id="money-1"> Stats</div>
+        <div class="money" id="money0">
+            <div id="money0icon" class="money_icon"></div>
+            <div class="flexx">
+                <div id="money0name"></div>
+                <div id="money0text"></div>
+            </div>
+        </div>
+        <div class="money" id="money1">
+            <div id="money1icon" class="money_icon"></div>
+            <div class="flexx">
+                <div id="money1name"></div>
+                <div id="money1text"></div>
+            </div>
+        </div>
+        <div class="money" id="money2">
+            <div id="money2icon" class="money_icon"></div>
+            <div class="flexx">
+                <div id="money2name"></div>
+                <div id="money2text"></div>
+            </div>
+        </div>
+        <div class="money" id="money3">
+            <div id="money3icon" class="money_icon"></div>
+            <div class="flexx">
+                <div id="money3name"></div>
+                <div id="money3text"></div>
+            </div>
+        </div>
+    </div>
+    <div class="centering">
+        <div id="surrender_tab" class="hidden">
+            Are you sure
+            to leave?
+            <button type="button" class="button grey width_width" onclick="Yes()">Yes</button>
+            <button type="button" class="button grey width_width" onclick="No()">No</button>
+        </div>
+        <div class="name">
+            <div class="topping">TechBill</div>
+        </div>
+    </div>
+    <div class="hidden" id="table">
+        <div id="dice"></div>
+    </div>
+    <div class="center_board">
+        <div class="board">
+            <div class="row">
+                <div class="corner start" id="stop-1">
+                    <div id="start_text">Start</div>
+                    <div id="start_arrow"></div>
+                </div>
+                <div class="window grey" id="stop-2">
+                    <div class="white_color">
+                        <div class="space">
+                            <div id="fb_image"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="window chance" id="stop-3">
+                    <div class="centerer">?</div>
+                </div>
+                <div class="window grey" id="stop-4">
+                    <div class="white_color">
+                        <div class="space">
+                            <div id="huawei_image"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="corner" id="stop-5">
+                    <div class="portals"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="window2 grey" id="stop-22">
+                    <div class="white_color2">
+                        <div id="hyundai_image"></div>
+                    </div>
+                </div>
+                <div class="nothing"></div>
+                <div class="window2 grey" id="stop-6">
+                    <div class="white_color3">
+                        <div id="nike_image"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="window2 grey" id="stop-21">
+                    <div class="white_color2">
+                        <div id="gucci_image"></div>
+                    </div>
+                </div>
+                <div class="nothing"></div>
+                <div class="window2 grey" id="stop-7">
+                    <div class="white_color3">
+                        <div id="renault_image"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="window2 grey" id="stop-20">
+                    <div class="white_color2">
+                        <div id="apple_image"></div>
+                    </div>
+                </div>
+                <div class="nothing"></div>
+                <div class="window2 grey" id="stop-8">
+                    <div class="white_color3">
+                        <div id="amazon_image"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="window2 grey" id="stop-19">
+                    <div class="white_color2">
+                        <div id="google_image"></div>
+                    </div>
+                </div>
+                <div class="nothing"></div>
+                <div class="window2 grey" id="stop-9">
+                    <div class="white_color3">
+                        <div id="samsung_image"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="window2 grey" id="stop-18">
+                    <div class="white_color2">
+                        <div id="volkswagen_image"></div>
+                    </div>
+                </div>
+                <div class="nothing"></div>
+                <div class="window2 grey" id="stop-10">
+                    <div class="white_color3">
+                        <div id="adidas_image"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="window2 grey" id="stop-17">
+                    <div class="white_color2">
+                        <div id="converse_image"></div>
+                    </div>
+                </div>
+                <div class="nothing"></div>
+                <div class="window2 grey" id="stop-11">
+                    <div class="white_color3">
+                        <div id="toyota_image"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="corner portal3" id="stop-16">
+                    <div class="portals"></div>
+                </div>
+                <div class="window grey" id="stop-15">
+                    <div class="white_color1">
+                        <div class="space">
+                            <div id="nokia_image"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="window chance" id="stop-14">
+                    <div class="centerer">?</div>
+                </div>
+                <div class="window grey" id="stop-13">
+                    <div class="white_color1">
+                        <div class="space">
+                            <div id="youtube_image"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="corner portal2" id="stop-12">
+                    <div class="portals"></div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons" id="buttons">
+            <button id="roll" type="button" class="button" onclick="roll()">Roll</button>
+            <button id="stats" type="button" class="button" onclick="stats()">Stats</button>
+            <button id="surrender" type="button" class="button" onclick="surrender()">Leave</button>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyAQRwC4rj8zSa-AnVgA2WAAnXHFQqClF6c",
+            authDomain: "nest-avac.firebaseapp.com",
+            databaseURL: "https://nest-avac.firebaseio.com",
+            projectId: "nest-avac",
+            storageBucket: "nest-avac.appspot.com",
+            messagingSenderId: "204529136753",
+            appId: "1:204529136753:web:919aaa1dc1095ffd"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="javascript/gameplay.js"></script>
+</body>
+
+</html>
